@@ -1,0 +1,167 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrícula Escolar | Portal Educa+</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#inicio">
+      <span class="school-icon">🎓</span>
+      <span>
+        <strong> Portal Educa+ </strong>
+        <small>Portal de Matrículas</small>
+      </span>
+    </a>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#etapas">Etapas</a>
+      <a href="#documentos">Documentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="outline-btn" onclick="openEnrollment()">Matricule-se</button>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="label">📚 MATRÍCULAS 2026 ABERTAS</span>
+        <h1>O futuro começa na escola.</h1>
+        <p>Faça a matrícula do seu filho de forma simples, segura e online.</p>
+        <div class="hero-actions">
+          <button class="primary-btn" onclick="openEnrollment()">Iniciar matrícula</button>
+          <a class="secondary-btn" href="#etapas">Saiba como funciona</a>
+        </div>
+        <div class="trust">
+          <span>✓ Matrícula de qualidade</span>
+          <span>✓ Processo online</span>
+          <span>✓ Atendimento especializado</span>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="panel-head">
+          <span>2026</span>
+          <b>Vagas disponíveis</b>
+        </div>
+        <h2>Escolha a etapa de ensino</h2>
+        <div class="grade-list">
+          <button onclick="selectGrade('Educação Infantil')"><span>🧸</span><div><b>Educação Infantil</b><small>Maternal ao Pré</small></div><i>›</i></button>
+          <button onclick="selectGrade('Ensino Fundamental I')"><span>✏️</span><div><b>Ensino Fundamental I</b><small>1º ao 5º ano</small></div><i>›</i></button>
+          <button onclick="selectGrade('Ensino Fundamental II')"><span>📖</span><div><b>Ensino Fundamental II</b><small>6º ao 9º ano</small></div><i>›</i></button>
+          <button onclick="selectGrade('Ensino Médio')"><span>🎓</span><div><b>Ensino Médio</b><small>1ª à 3ª série</small></div><i>›</i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container stats">
+    <div><b>1.200+</b><span>alunos matriculados</span></div>
+    <div><b>25 anos</b><span>de experiência</span></div>
+    <div><b>100%</b><span>processo digital</span></div>
+    <div><b>4 etapas</b><span>para concluir</span></div>
+  </section>
+
+  <section class="section" id="etapas">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">COMO FUNCIONA</span>
+        <h2>Matricule-se em poucos passos</h2>
+        <p>Um processo simples para você cuidar do futuro do seu filho.</p>
+      </div>
+      <div class="steps">
+        <article><span>01</span><div class="step-icon">📝</div><h3>Preencha o cadastro</h3><p>Informe os dados do responsável e do aluno.</p></article>
+        <article><span>02</span><div class="step-icon">📚</div><h3>Escolha a turma</h3><p>Selecione a etapa de ensino e o ano escolar.</p></article>
+        <article><span>03</span><div class="step-icon">📎</div><h3>Envie os documentos</h3><p>Separe os documentos necessários para a matrícula.</p></article>
+        <article><span>04</span><div class="step-icon">✅</div><h3>Confirme a matrícula</h3><p>Receba a confirmação e as próximas orientações.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="documents" id="documentos">
+    <div class="container document-grid">
+      <div>
+        <span class="eyebrow">DOCUMENTAÇÃO</span>
+        <h2>Tenha os documentos em mãos</h2>
+        <p>Para agilizar o processo, prepare os documentos abaixo antes de iniciar.</p>
+      </div>
+      <div class="document-card">
+        <div>📄</div>
+        <ul>
+          <li>Documento do responsável</li>
+          <li>Certidão de nascimento do aluno</li>
+          <li>Comprovante de residência</li>
+          <li>Documento escolar / histórico</li>
+          <li>Carteira de vacinação, quando aplicável</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contato">
+    <div class="container contact">
+      <div>
+        <span class="eyebrow">PRECISA DE AJUDA?</span>
+        <h2>Fale com nossa secretaria</h2>
+        <p>Nossa equipe está pronta para orientar você durante o processo de matrícula.</p>
+      </div>
+      <div class="contact-box">
+        <span>📞</span><div><b>(11) 4000-2026</b><small>Seg. a Sex. · 8h às 17h</small></div>
+      </div>
+      <div class="contact-box">
+        <span>✉️</span><div><b>secretaria@novageracao.edu.br</b><small>Respondemos em horário comercial</small></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <div><strong>🎓 Colégio Nova Geração</strong><span>Portal de Matrículas 2026</span></div>
+    <span>© 2026 · Projeto demonstrativo</span>
+  </div>
+</footer>
+
+<div class="modal hidden" id="modal">
+  <div class="modal-box">
+    <button class="close" onclick="closeEnrollment()">×</button>
+    <span class="label">MATRÍCULA ESCOLAR</span>
+    <h2 id="formTitle">Inicie a matrícula</h2>
+    <p>Preencha os dados abaixo para solicitar a matrícula.</p>
+    <form id="enrollmentForm" onsubmit="submitEnrollment(event)">
+      <label>Nome do responsável
+        <input required name="responsavel" placeholder="Digite seu nome completo">
+      </label>
+      <label>Nome do aluno
+        <input required name="aluno" placeholder="Digite o nome do aluno">
+      </label>
+      <label>Etapa de ensino
+        <select required name="etapa" id="gradeSelect">
+          <option value="">Selecione</option>
+          <option>Educação Infantil</option>
+          <option>Ensino Fundamental I</option>
+          <option>Ensino Fundamental II</option>
+          <option>Ensino Médio</option>
+        </select>
+      </label>
+      <label>E-mail
+        <input required type="email" name="email" placeholder="responsavel@email.com">
+      </label>
+      <label>Telefone
+        <input required name="telefone" placeholder="(00) 00000-0000">
+      </label>
+      <button class="primary-btn full" type="submit">Enviar solicitação de matrícula</button>
+    </form>
+    <div id="success" class="success hidden">✅ Solicitação enviada! A secretaria entrará em contato para confirmar os próximos passos.</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+<
